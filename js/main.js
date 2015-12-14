@@ -137,7 +137,6 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-                            .addIndicators()
                             .addTo(controller);
 
 
