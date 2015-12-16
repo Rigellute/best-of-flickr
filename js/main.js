@@ -75,6 +75,9 @@ $(document).ready(function () {
                             return 'title-container' + (i + 1);
                         });
 
+                        TweenMax.set('.arrow', {
+                            y: '-62%'
+                        });
 
                         //                header Tween timeline
                         var headerTl = new TimelineLite();
@@ -95,12 +98,9 @@ $(document).ready(function () {
                             .staggerFrom('.header', 1.5, {
                                 opacity: 0
                             }, 0.5)
-                            .set('.arrow', {
-                                y: '-62%'
-                            })
                             .to('.arrow', 0.5, {
                                 opacity: 1
-                            })
+                            }, '-=1')
                             .arrowTl;
 
                         var arrowTl = new TimelineMax({
@@ -153,8 +153,8 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-
-                        .addTo(controller);
+                            .addIndicators()
+                            .addTo(controller);
 
 
 
@@ -312,8 +312,8 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-
-                        .addTo(controller);
+                            .addIndicators()
+                            .addTo(controller);
 
                         var photoArray = data.photos.photo;
                         console.log(photoArray.length);
