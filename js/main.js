@@ -153,7 +153,6 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-                            .addIndicators()
                             .addTo(controller);
 
 
@@ -312,7 +311,6 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-                            .addIndicators()
                             .addTo(controller);
 
                         var photoArray = data.photos.photo;
