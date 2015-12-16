@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-//Toggle navbar
+    //Toggle navbar
     $('.dropdown').click(function () {
         $('.drop-nav').toggle();
     });
@@ -95,6 +95,9 @@ $(document).ready(function () {
                             .staggerFrom('.header', 1.5, {
                                 opacity: 0
                             }, 0.5)
+                            .set('.arrow', {
+                                y: '-62%'
+                            })
                             .to('.arrow', 0.5, {
                                 opacity: 1
                             })
@@ -150,8 +153,8 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-                            
-                            .addTo(controller);
+
+                        .addTo(controller);
 
 
 
@@ -309,8 +312,8 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
-                            
-                            .addTo(controller);
+
+                        .addTo(controller);
 
                         var photoArray = data.photos.photo;
                         console.log(photoArray.length);
