@@ -1,28 +1,35 @@
 $(document).ready(function () {
 
+//Toggle navbar
+    $('.dropdown').click(function () {
+        $('.drop-nav').toggle();
+    });
 
+    // Scroll To about position
+    var aboutPos = $('#about-position-anchor').offset().top;
+    console.log(aboutPos);
+    $('.about-nav').click(function () {
+        $('.drop-nav').hide();
+        $('.about').toggle();
+        TweenMax.to(window, 1, {
+            scrollTo: aboutPos / 2,
+            delay: 0.2
+        });
+    });
 
-
+    //    Hide elements before the page has loaded
+    $('.about').hide();
     $('.section-1').hide();
     $('.footer').hide();
     //    media query for larger devices
-    if (window.matchMedia("(min-width: 992px)").matches) {
+    if (window.matchMedia("(min-width: 1025px)").matches) {
         new TimelineMax({})
             .set('.loading-svg', {
                 scale: 0.6
             })
             .to('#svg_1', 3, {
                 strokeDashoffset: 0
-            })
-            //        .to('#svg_1', 1.8, {
-            //            strokeDasharray: 0
-            //        })
-//            .to('.loading-svg', 60, {
-//                rotation: 360,
-//                delay: 0.4,
-//                repeat: -1,
-//            })
-        ;
+            });
 
         $.ajax({
             url: "https://api.flickr.com/services/rest/?&method=flickr.interestingness.getList&api_key=9880f2212f49d2289601fb002f87a718&format=json&per_page=30&extras=owner_name,url_h,url_l",
@@ -40,13 +47,15 @@ $(document).ready(function () {
                         // Fade in sections
                         $('body').removeClass('loading');
                         //                    $('.loading-svg').hide();
+                        $('.dropdown').delay(1500).show(1000);
                         $('.section-1').show();
                         $('.footer').show();
 
                         $('#photos').html(html);
                         console.log("Load was performed.");
 
-                        // init controller
+
+                        // init parallax controller
                         var parallaxController = new ScrollMagic.Controller({
                             globalSceneOptions: {
                                 triggerHook: "onEnter",
@@ -126,6 +135,10 @@ $(document).ready(function () {
                                 opacity: 0,
                                 y: -300
                             }, 0.3, '-=0.6')
+                            .to('nav', 0.5, {
+                                opacity: 0,
+                                y: -300
+                            })
                             .to('.arrow', 0.5, {
                                 opacity: 0,
                                 y: -300
@@ -137,6 +150,7 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
+                            
                             .addTo(controller);
 
 
@@ -239,6 +253,7 @@ $(document).ready(function () {
                         // Fade in sections
                         $('body').removeClass('loading');
                         //                        $('.loading-svg').hide();
+                        $('.dropdown').delay(1000).show(1000);
                         $('.section-1').show();
                         $('.footer').show();
 
@@ -278,25 +293,24 @@ $(document).ready(function () {
                             })
                             .staggerFrom('.header', 1.5, {
                                 opacity: 0
-                            }, 0.5)
-                            .to('.arrow', 0.5, {
-                                opacity: 1
-                            });
-                        //                            .arrowTl;
-                        //
-                        //                        var arrowTl = new TimelineMax({
-                        //                                repeat: -1,
-                        //                            })
-                        //                            .to('.arrow', 1, {
-                        //                                y: '4%',
-                        //                                ease: Bounce.easeOut
-                        //                            })
-                        //                            .to('.arrow', 1, {
-                        //                                delay: 1,
-                        //                                y: '0%',
-                        //                            });
+                            }, 0.5);
 
-                        //end
+
+                        var section1Scroll = new TimelineMax()
+
+                        .to('nav', 0.5, {
+                            opacity: 0,
+                            y: -300
+                        });
+
+                        var section1ScrollScene = new ScrollMagic.Scene({
+                                triggerElement: '#photos',
+                                offset: '-150%',
+                                duration: '50%'
+                            })
+                            .setTween(section1Scroll)
+                            
+                            .addTo(controller);
 
                         var photoArray = data.photos.photo;
                         console.log(photoArray.length);

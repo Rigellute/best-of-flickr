@@ -13,29 +13,55 @@
 
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body class="loading">
 
-<div class="container">
+    <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    <div class="container">
+        <nav>
+            <ul>
+                <li class="dropdown">
+                    <a href="#"><span class="fa fa-navicon fa-2x"></span></a>
+                </li>
+
+                <ul class="drop-nav">
+                    <a href="#">
+                        <li class="main-website">ALEXANDER KELIRIS</li>
+                    </a>
+                    <a href="#">
+                        <li class="about-nav">ABOUT</li>
+                    </a>
+                    <a href = "mailto:alexATkelirisDOTcom" 
+   onclick = "this.href=this.href
+              .replace(/AT/,'&#64;')
+              .replace(/DOT/,'&#46;')"
+>
+                        <li class="contact">CONTACT</li>
+                    </a>
+                </ul>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container">
         <svg class="loading-svg" preserveAspectRatio="xMinYMin" viewBox="0 0 900 867" xmlns="http://www.w3.org/2000/svg" stroke="null" style="vector-effect: non-scaling-stroke;">
             <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
             <g stroke="null">
                 <title stroke="null">Layer 1</title>
                 <path stroke="#d4d4d4" stroke-width="5" fill="none" id="svg_1" d="m2.5,557.59436l88.453125,-382.763474l358.121826,-170.330879l358.143555,170.330879l88.452759,382.763474l-247.827209,306.905579l-397.514282,0l-247.829773,-306.905579l0,0z" />
             </g>
-        
+
         </svg>
     </div>
 
 
-    <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-    <!-- The DOM element that will hold our results -->
     <div class="section-1">
         <div class="header-wrapper">
             <h1 class="header">Best of Flickr</h1>
@@ -43,23 +69,52 @@
             <h3 class="header">Created by Alexander Keliris</h3>
             <p class="header"><small>All images belong to their owners</small></p>
         </div>
-<a href="#"><svg class='arrow' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                 width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" preserveAspectRatio="xMidYMin" style="enable-background:new 0 0 451.847 451.847;"
-                 xml:space="preserve" fill="#d4d4d4">
-            <g>
-                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
+        <a href="#">
+            <svg class='arrow' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="451.847px" height="451.847px" viewBox="0 0 451.847 451.847" preserveAspectRatio="xMidYMin" style="enable-background:new 0 0 451.847 451.847;" xml:space="preserve" fill="#d4d4d4">
+                <g>
+                    <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751
                     c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0
-                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z"/>
-            </g>
-            </svg></a>
+                    c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" />
+                </g>
+            </svg>
+        </a>
+    </div>
+    <div id="about-position-anchor"></div>
+    <div id="about" class="container about">
+        <hr class="line">
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+
+            <div class="col-md-7">
+
+                <h1 class="header">About</h1>
+                <p class="header">This page collects 30 of the day's most interesting photos from Flickr and displays them with a parallax effect.</p>
+                <p class="header">The content changes everyday&nbsp;and&nbsp;I do not decide which photos are&nbsp;used&nbsp;nor which author to show. Each image belongs to its author.&nbsp;</p>
+                <p class="header">If you like a particular image and want to see more from the author, you can click on the authors name taking you to their Flickr account.</p>
+                <h1 class="header">Technical Information</h1>
+                <p class="header">This project uses Handlebars.js in conjunction with the Flickr API to display the images.&nbsp;To create the scrolling animations and parallax effect, I utilise the&nbsp;powerful combination of&nbsp;the <a href="https://greensock.com/" target="_blank">Green Sock Animation Platform</a>&nbsp;and <a href="http://scrollmagic.io/" target="_blank">ScrollMagic</a>.&nbsp;This ensures maximal control, browser compatibility and performance for both&nbsp;mobile and desktop devices.</p>
+
+                <h2 class="header">If there are any issues or you have any feedback, please <a href = "mailto:alexATkelirisDOTcom" 
+   onclick = "this.href=this.href
+              .replace(/AT/,'&#64;')
+              .replace(/DOT/,'&#46;')"
+><strong>get in touch</strong></a>.</h2>
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
     </div>
 
+    <!-- The DOM element that will hold the photos -->
     <div id="photos">
     </div>
 
     <footer class="footer">
         <div class="center-text container">
-           <p>Site Created By Alexander Keliris</p>
+            <p>Site Created By Alexander Keliris</p>
             <p><small>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed under <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a></small></p>
         </div>
     </footer>
@@ -71,7 +126,7 @@
         <div class="parallax-parent">
 
             <div class="title-container">
-                <h1 class="title">&nbsp;{{title}} - {{ownername}}&nbsp;</h1>
+                <h1 class="title">&nbsp;{{title}} - <a target="_blank" href="https://www.flickr.com/photos/{{owner}}">{{ownername}}</a>&nbsp;</h1>
             </div>
             {{#if url_h}}
             <div class="image" style="background-image: url({{url_h}})"></div>
@@ -95,8 +150,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/3.2.0/imagesloaded.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/ScrollToPlugin.min.js"></script>
 

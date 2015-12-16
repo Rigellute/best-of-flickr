@@ -134,6 +134,8 @@ body {
 h1,
 h2,
 h3,
+h4,
+h5,
 p {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
@@ -141,9 +143,52 @@ p {
     color: #fff;
 }
 
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+}
+
+
+/*
+nav a {
+    padding: 5%
+}
+*/
+
 a {
     text-decoration: none;
     color: #d4d4d4
+}
+a:hover {
+    text-decoration: underline;
+    color: #01BAEF;
+}
+
+.dropdown {
+    text-align: right;
+    display: none;
+    position: fixed;
+    padding-top: 3%;
+    box-sizing: border-box;
+}
+
+.drop-nav {
+    position: fixed;
+    display: none;
+    margin-top: 6%;
+    /*    text-align: right;*/
+}
+
+.drop-nav li {
+    border-bottom: 1px solid #d4d4d4;
+    /*    background: rgba(0,0,0,0.4);*/
 }
 
 .section-1 {
@@ -182,6 +227,15 @@ a {
     position: relative;
 }
 
+.about {
+    /*    display: none;*/
+    padding-left: 12%;
+    padding-right: 12%;
+    margin-bottom: 2%;
+    text-align: justify;
+    overflow: hidden;
+}
+
 .parallax-parent {
     height: 100vh;
     overflow: hidden;
@@ -215,6 +269,11 @@ a {
     background-color: rgba(0, 0, 0, 0.3);
     display: inline-block;
     text-align: center;
+}
+
+.title a:hover {
+    text-decoration: underline;
+    color: #01BAEF;
 }
 
 footer {
@@ -257,10 +316,13 @@ footer {
     .arrow {
         display: none;
     }
+    .drop-nav {
+        padding-left: 25%;
+    }
 }
 
 
-/*phones and tablets*/
+/*phones and some tablets*/
 
 @media (max-width: 768px) and (orientation: portrait) {
     h1,
@@ -270,6 +332,9 @@ footer {
     }
     p {
         font-size: 0.5em;
+    }
+    .drop-nav {
+        margin-top: 8%;
     }
     .loading-svg {
         -webkit-transform: scale(0.8);
@@ -284,6 +349,18 @@ footer {
     .section-1 {
         height: 100vh;
         overflow: hidden;
+    }
+    .about {
+        text-align: left;
+    }
+    .about h1 {
+        font-size: 2em;
+    }
+    .about h2 {
+        font-size: 1.5em;
+    }
+    .about p {
+        font-size: 1em;
     }
     .parallax-parent {
         height: 50vh;
@@ -309,6 +386,11 @@ footer {
     h3 {
         font-size: 1em;
     }
+    /*
+    .drop-nav {
+        margin-top: 8%;
+    }
+*/
     .loading-svg {
         -webkit-transform: scale(0.4);
         -ms-transform: scale(0.4);
@@ -320,11 +402,23 @@ footer {
         overflow: hidden;
     }
     p {
-        font-size: 0.5em;
+        font-size: 0.6em;
     }
     .section-1 {
         height: 100vh;
         overflow: hidden;
+    }
+    .about {
+        text-align: left;
+    }
+    .about h1 {
+        font-size: 2em;
+    }
+    .about h2 {
+        font-size: 1.5em;
+    }
+    .about p {
+        font-size: 1em;
     }
     .parallax-parent {
         height: 90vh;
@@ -338,6 +432,22 @@ footer {
     }
     .arrow {
         display: none;
+    }
+}
+
+/*iPad media Query*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .loading-svg {
+        -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+        transform: scale(0.6);
+    }
+    .drop-nav {
+        margin-top: 7%;
+    }
+    .section-1 {
+        height: 100vh;
+        overflow: hidden;
     }
 }
 
@@ -442,6 +552,61 @@ footer {
 }
 
 
+
+/*BOOTSTRAP ROW COL*/
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+@media (min-width: 992px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
