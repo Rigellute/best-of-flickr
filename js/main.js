@@ -12,7 +12,7 @@ $(document).ready(function () {
         $('.drop-nav').hide();
         $('.about').toggle();
         TweenMax.to(window, 1, {
-            scrollTo: aboutPos / 2,
+            scrollTo: aboutPos,
             delay: 0.2
         });
     });
@@ -148,14 +148,31 @@ $(document).ready(function () {
                             });
 
                         var section1ScrollScene = new ScrollMagic.Scene({
-                                triggerElement: '#photos',
-                                offset: '-310%',
+                                triggerElement: '#about-position-anchor',
+                                offset: - (aboutPos / 2),
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
+                            
                             .addTo(controller);
 
-
+                        //                        about scroll
+                        var aboutTween = new TimelineMax()
+                        .to('.line2', 0.5, {scale: 0})
+                        .staggerTo('.about-tween', 0.5, {
+                            opacity: 0,
+                            y: -300
+                        }, 0.3, '-=0.5');
+                        var aboutScene = new ScrollMagic.Scene({
+                            triggerElement: '#about-position-anchor',
+                            triggerHook: 'onLeave',
+                            offest: -50,
+                            duration: '50%'
+                        })
+                        .setTween(aboutTween)
+                        
+                        .addTo(controller);
+                        
 
                         var photoArray = data.photos.photo;
                         console.log(photoArray.length);
@@ -311,6 +328,7 @@ $(document).ready(function () {
                                 duration: '50%'
                             })
                             .setTween(section1Scroll)
+                            
                             .addTo(controller);
 
                         var photoArray = data.photos.photo;
