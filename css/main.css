@@ -250,7 +250,7 @@ a:hover {
     position: relative;
     background-position: center;
     height: 110%;
-    top: -61%;
+    top: -60%;
     z-index: -1;
 }
 
@@ -374,7 +374,7 @@ footer {
         top: -85%;
     }
     .title-container {
-        top: 19%;
+        top: 8%;
     }
     .arrow {
         display: none;
@@ -432,7 +432,7 @@ footer {
         top: -69%;
     }
     .title-container {
-        top: 19%;
+        top: 8%;
     }
     .arrow {
         display: none;
