@@ -425,11 +425,11 @@ footer {
         font-size: 1em;
     }
     .parallax-parent {
-        height: 90vh;
+        height: 100vh;
     }
     .image {
-        height: 116%;
-        top: -66%;
+        height: 112%;
+        top: -69%;
     }
     .title-container {
         top: 19%;
