@@ -2,17 +2,18 @@ $(document).ready(function () {
 
     //Toggle navbar
     $('.dropdown').click(function () {
-        $('.drop-nav').toggle();
+        $('.drop-nav').toggle(500);
     });
 
     // Scroll To about position
     var aboutPos = $('#about-position-anchor').offset().top;
     console.log(aboutPos);
+    var viewportH = $(window).height();
     $('.about-nav').click(function () {
         $('.drop-nav').hide();
         $('.about').toggle();
         TweenMax.to(window, 1, {
-            scrollTo: aboutPos,
+            scrollTo: viewportH,
             delay: 0.2
         });
     });
@@ -138,7 +139,7 @@ $(document).ready(function () {
                                 opacity: 0,
                                 y: -300
                             }, 0.3, '-=0.6')
-                            .to('nav', 0.5, {
+                            .to('.navigation-control', 0.5, {
                                 opacity: 0,
                                 y: -300
                             })
@@ -317,7 +318,7 @@ $(document).ready(function () {
 
                         var section1Scroll = new TimelineMax()
 
-                        .to('nav', 0.5, {
+                        .to('.navigation-control', 0.5, {
                             opacity: 0,
                             y: -300
                         });

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="900"
+   height="900"
+   stroke="null"
+   style="vector-effect: non-scaling-stroke;"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="ThickHeptagonLogo.svg"
+   inkscape:export-filename="D:\Applications\MAMP\htdocs\FlickrParallaxScroll\img\HeptagonLogo.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <metadata
+     id="metadata10">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="2194"
+     inkscape:window-height="1171"
+     id="namedview6"
+     showgrid="false"
+     inkscape:zoom="1.0488889"
+     inkscape:cx="362.9304"
+     inkscape:cy="442.95275"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Background">
+    <rect
+       style="opacity:1;fill:#222222;fill-opacity:1;fill-rule:evenodd;stroke:#222222;stroke-width:27.37599945;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect4134"
+       width="890.46606"
+       height="884.74573"
+       x="1.9067796"
+       y="3.8135688"
+       rx="3.3193099"
+       ry="3.3435099" />
+  </g>
+  <polygon
+     points="587,791.63153 227,791.63153 2.543671,510.17219 82.651208,159.19815 407,3 731.34879,159.19815 811.45633,510.17219 "
+     id="polygon4"
+     transform="matrix(0.94466233,0,0,0.94466233,65.522431,75.020516)"
+     style="fill:none;stroke:#ffffff;stroke-width:13.47353935;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+     inkscape:export-filename="D:\Applications\MAMP\htdocs\GSAP AK Website Take 2\img\ThickHeptagonLogo.png"
+     inkscape:export-xdpi="90"
+     inkscape:export-ydpi="90" />
+</svg>
